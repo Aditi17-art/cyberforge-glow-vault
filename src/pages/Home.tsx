@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity } from "lucide-react";
+import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity, Code2, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-cyber.jpg";
 
@@ -37,15 +37,15 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-medium text-primary mb-6">
-                <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-                Trusted by 200+ businesses worldwide
+                <Sparkles className="h-3.5 w-3.5" />
+                All-in-One Tech Solutions
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
-                Cybersecurity Solutions for{" "}
+                Cybersecurity + Digital Solutions for{" "}
                 <span className="text-gradient">Modern Businesses</span>
               </h1>
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Cyberforge Technologies delivers enterprise-grade defense — penetration testing, managed security, incident response and cloud hardening — engineered to keep your business unbreachable.
+                Cyberforge Technologies delivers enterprise-grade defense plus world-class web development and design — one partner to build, brand and bulletproof your business.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
