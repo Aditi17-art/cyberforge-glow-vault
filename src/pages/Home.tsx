@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity } from "lucide-react";
+import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity, Code2, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-cyber.jpg";
 
@@ -37,15 +37,15 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-medium text-primary mb-6">
-                <span className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-                Trusted by 200+ businesses worldwide
+                <Sparkles className="h-3.5 w-3.5" />
+                All-in-One Tech Solutions
               </div>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
-                Cybersecurity Solutions for{" "}
+                Cybersecurity + Digital Solutions for{" "}
                 <span className="text-gradient">Modern Businesses</span>
               </h1>
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Cyberforge Technologies delivers enterprise-grade defense — penetration testing, managed security, incident response and cloud hardening — engineered to keep your business unbreachable.
+                Cyberforge Technologies delivers enterprise-grade defense plus world-class web development and design — one partner to build, brand and bulletproof your business.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
@@ -112,7 +112,61 @@ const Home = () => {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* DIGITAL SOLUTIONS PREVIEW */}
+      <section className="section-padding border-t border-primary/10 bg-cyber-surface/30">
+        <div className="container mx-auto">
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Beyond Security</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Digital Solutions <span className="text-gradient">Beyond Security</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              We don't just defend your business — we help you build it. Modern websites and brand design, engineered with the same precision.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: Code2,
+                title: "Web Development",
+                desc: "Fast, scalable and visually stunning websites — from business sites to custom web apps and e-commerce.",
+                points: ["Business & Portfolio Sites", "E-commerce", "Custom Web Apps", "Landing Pages"],
+                cta: "Get Your Website",
+              },
+              {
+                icon: Palette,
+                title: "Graphic Designing",
+                desc: "Creative, impactful design that elevates your brand — logos, social creatives, UI/UX and full branding kits.",
+                points: ["Logo & Branding", "Social Creatives", "UI/UX Design", "Marketing Materials"],
+                cta: "Start Designing",
+              },
+            ].map((s, i) => (
+              <div
+                key={s.title}
+                className="glass-card p-8 group transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-sm animate-fade-up"
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
+                <div className="h-14 w-14 rounded-2xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-5 shadow-glow-sm group-hover:scale-110 transition-transform">
+                  <s.icon className="h-7 w-7" />
+                </div>
+                <h3 className="font-display font-bold text-2xl mb-2">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {s.points.map((p) => (
+                    <span key={p} className="text-xs px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-foreground/80">
+                      {p}
+                    </span>
+                  ))}
+                </div>
+                <Button asChild variant="neon" size="sm">
+                  <Link to="/services">{s.cta} <ArrowRight /></Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="section-padding bg-cyber-surface/30 border-y border-primary/10">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

@@ -1,6 +1,25 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, FileCheck, Lock, Eye, AlertTriangle, Cloud, Check, ArrowRight } from "lucide-react";
+import { ShieldCheck, FileCheck, Lock, Eye, AlertTriangle, Cloud, Check, ArrowRight, Code2, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const digitalServices = [
+  {
+    icon: Code2,
+    title: "Web Development",
+    tagline: "Fast. Scalable. Stunning.",
+    desc: "We build fast, scalable, and visually stunning websites tailored to your business needs — engineered for performance and built to convert.",
+    points: ["Business Websites", "Portfolio Websites", "E-commerce Development", "Custom Web Applications", "Landing Pages"],
+    cta: "Get Your Website",
+  },
+  {
+    icon: Palette,
+    title: "Graphic Designing",
+    tagline: "Designs that define your brand.",
+    desc: "Creative and impactful designs that elevate your brand identity — from pixel-perfect logos to full marketing campaigns.",
+    points: ["Logo Design", "Social Media Creatives", "UI/UX Design", "Branding Kits", "Marketing Materials"],
+    cta: "Start Designing",
+  },
+];
 
 const services = [
   {
@@ -54,12 +73,15 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="container relative mx-auto text-center max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-medium text-primary mb-5">
+            <Sparkles className="h-3.5 w-3.5" /> All-in-One Tech Solutions
+          </div>
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Our Services</p>
           <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-            End-to-end <span className="text-gradient">cybersecurity services</span>
+            Cybersecurity <span className="text-gradient">+ Digital Solutions</span>
           </h1>
           <p className="mt-6 text-muted-foreground text-lg">
-            Six core capabilities. One trusted partner. Whatever your security challenge — we have the expertise to solve it.
+            Six core security capabilities, plus web development and design — one trusted partner for every layer of your digital business.
           </p>
         </div>
       </section>
@@ -99,6 +121,63 @@ const Services = () => {
         </div>
       </section>
 
+      {/* DIGITAL SOLUTIONS */}
+      <section className="section-padding border-t border-primary/10 bg-cyber-surface/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center mb-14">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Beyond Security</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Digital Solutions <span className="text-gradient">Beyond Security</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              From bulletproof websites to brand-defining design — we build the digital experiences that power your growth.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {digitalServices.map((s, i) => (
+              <div
+                key={s.title}
+                className="glass-card p-8 md:p-10 group transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-sm animate-fade-up"
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
+                <div className="h-16 w-16 rounded-2xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-5 shadow-glow-sm group-hover:scale-110 transition-transform">
+                  <s.icon className="h-8 w-8" />
+                </div>
+                <h3 className="font-display text-2xl md:text-3xl font-bold">{s.title}</h3>
+                <p className="text-primary text-sm mt-2 mb-4">{s.tagline}</p>
+                <p className="text-muted-foreground leading-relaxed mb-5">{s.desc}</p>
+                <div className="grid sm:grid-cols-2 gap-3 mb-6">
+                  {s.points.map((p) => (
+                    <div key={p} className="flex items-start gap-2 text-sm">
+                      <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <span className="text-foreground/90">{p}</span>
+                    </div>
+                  ))}
+                </div>
+                <Button asChild variant="hero" size="sm">
+                  <Link to="/contact">{s.cta} <ArrowRight /></Link>
+                </Button>
+              </div>
+            ))}
+          </div>
+
+          {/* Mini CTA banner */}
+          <div className="mt-12 relative overflow-hidden rounded-2xl glass-card p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-5">
+            <div className="absolute inset-0 bg-gradient-glow opacity-40" />
+            <div className="relative">
+              <h3 className="font-display text-xl md:text-2xl font-bold">
+                Need a secure website? <span className="text-gradient">We build & protect it.</span>
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">One team for development, design and defense.</p>
+            </div>
+            <Button asChild variant="neon" size="lg" className="relative shrink-0">
+              <Link to="/contact">Talk to Us <ArrowRight /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container mx-auto">
           <div className="relative overflow-hidden rounded-3xl glass-card p-10 md:p-16 text-center">
@@ -108,7 +187,7 @@ const Services = () => {
                 Not sure which service you need?
               </h2>
               <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-                Talk to our security architects. We'll assess your needs and recommend the right approach — free of cost.
+                Talk to our architects. We'll assess your needs and recommend the right approach — free of cost.
               </p>
               <Button asChild variant="hero" size="lg" className="mt-8">
                 <Link to="/contact">Book Free Consultation <ArrowRight /></Link>
