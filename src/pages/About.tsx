@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import {
   Target, Eye, ShieldCheck, Award, Users, TrendingUp, Sparkles, ArrowRight,
   Rocket, Globe2, Zap, Lock, CheckCircle2, Star,
+  Building2, Landmark, HeartPulse, ShoppingBag, Cpu, GraduationCap,
+  BadgeCheck, ShieldAlert, Cloud, Server,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -12,11 +14,20 @@ const values = [
   { icon: TrendingUp, title: "Innovation", desc: "Always ahead of evolving threats with modern tooling." },
 ];
 
-const journey = [
-  { year: "2014", title: "Founded in stealth", desc: "Born from a red-team collective serving Fortune 500 banks." },
-  { year: "2017", title: "First global SOC", desc: "Launched 24/7 managed detection across APAC and EMEA." },
-  { year: "2020", title: "Cloud-native pivot", desc: "Built dedicated AWS, Azure & GCP security practices." },
-  { year: "2024", title: "Digital + Defense", desc: "Expanded into web, design and QA — one partner, full stack." },
+const industries = [
+  { icon: Landmark, name: "Banking & Finance" },
+  { icon: HeartPulse, name: "Healthcare" },
+  { icon: ShoppingBag, name: "E-commerce" },
+  { icon: Cpu, name: "SaaS & Tech" },
+  { icon: Building2, name: "Enterprise" },
+  { icon: GraduationCap, name: "EdTech" },
+];
+
+const certifications = [
+  { icon: BadgeCheck, title: "ISO 27001", desc: "Information security management certified." },
+  { icon: ShieldAlert, title: "SOC 2 Type II", desc: "Audited controls for security & privacy." },
+  { icon: Cloud, title: "AWS Partner", desc: "Certified cloud security specialists." },
+  { icon: Server, title: "CERT-In Empanelled", desc: "Government-recognized security auditors." },
 ];
 
 const differentiators = [
@@ -124,33 +135,57 @@ const About = () => {
         </div>
       </section>
 
-      {/* JOURNEY / TIMELINE */}
+      {/* TRUSTED BY INDUSTRIES */}
       <section className="section-padding">
         <div className="container mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Our Journey</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold">A decade of <span className="text-gradient">relentless evolution</span></h2>
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Trusted Across Industries</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Securing leaders in <span className="text-gradient">every sector</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              From regulated finance to fast-moving startups — we tailor defense to your domain.
+            </p>
           </div>
-          <div className="relative">
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/40 to-transparent hidden md:block" />
-            <div className="space-y-8 md:space-y-0">
-              {journey.map((j, i) => (
-                <div
-                  key={j.year}
-                  className={`md:grid md:grid-cols-2 md:gap-12 items-center animate-fade-up ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}
-                  style={{ animationDelay: `${i * 100}ms` }}
-                >
-                  <div className={`glass-card p-6 group transition-all duration-300 hover:shadow-glow-sm hover:border-primary/50 ${i % 2 === 1 ? "md:text-right" : ""}`}>
-                    <div className="font-mono text-primary text-sm mb-2">{j.year}</div>
-                    <h4 className="font-display font-bold text-xl mb-2">{j.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{j.desc}</p>
-                  </div>
-                  <div className="hidden md:flex justify-center relative">
-                    <div className="h-4 w-4 rounded-full bg-primary shadow-neon ring-4 ring-background" />
-                  </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {industries.map((ind, i) => (
+              <div
+                key={ind.name}
+                className="glass-card p-5 flex flex-col items-center justify-center text-center gap-3 group transition-all duration-300 hover:scale-[1.06] hover:shadow-glow-sm hover:border-primary/50 animate-fade-up"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/30 grid place-items-center text-primary group-hover:scale-110 transition-transform">
+                  <ind.icon className="h-6 w-6" />
                 </div>
-              ))}
-            </div>
+                <span className="text-sm font-medium text-foreground/90">{ind.name}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CERTIFICATIONS */}
+          <div className="text-center max-w-2xl mx-auto mt-20 mb-10">
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Certifications & Partnerships</p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Backed by <span className="text-gradient">global standards</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certifications.map((c, i) => (
+              <div
+                key={c.title}
+                className="relative overflow-hidden glass-card p-6 group transition-all duration-300 hover:scale-[1.04] hover:shadow-glow-sm hover:border-primary/50 animate-fade-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                    <c.icon className="h-6 w-6" />
+                  </div>
+                  <h4 className="font-display font-semibold text-lg mb-2">{c.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{c.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
