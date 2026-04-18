@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity, Code2, Palette, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity, Code2, Palette, Sparkles, TestTube2, Bug } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-cyber.jpg";
 
@@ -10,6 +10,8 @@ const services = [
   { icon: Eye, title: "Managed Security", desc: "24/7 SOC monitoring, threat hunting and rapid containment." },
   { icon: AlertTriangle, title: "Incident Response", desc: "Forensics, recovery and post-breach hardening on demand." },
   { icon: Cloud, title: "Cloud Security", desc: "Hardening AWS, Azure and GCP environments end-to-end." },
+  { icon: Bug, title: "Application Pentesting", desc: "Web, mobile & API testing against OWASP Top 10 and beyond." },
+  { icon: TestTube2, title: "QA & Software Testing", desc: "Manual, automated, performance and security testing in one." },
 ];
 
 const stats = [
