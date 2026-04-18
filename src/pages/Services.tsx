@@ -1,6 +1,25 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, FileCheck, Lock, Eye, AlertTriangle, Cloud, Check, ArrowRight } from "lucide-react";
+import { ShieldCheck, FileCheck, Lock, Eye, AlertTriangle, Cloud, Check, ArrowRight, Code2, Palette, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const digitalServices = [
+  {
+    icon: Code2,
+    title: "Web Development",
+    tagline: "Fast. Scalable. Stunning.",
+    desc: "We build fast, scalable, and visually stunning websites tailored to your business needs — engineered for performance and built to convert.",
+    points: ["Business Websites", "Portfolio Websites", "E-commerce Development", "Custom Web Applications", "Landing Pages"],
+    cta: "Get Your Website",
+  },
+  {
+    icon: Palette,
+    title: "Graphic Designing",
+    tagline: "Designs that define your brand.",
+    desc: "Creative and impactful designs that elevate your brand identity — from pixel-perfect logos to full marketing campaigns.",
+    points: ["Logo Design", "Social Media Creatives", "UI/UX Design", "Branding Kits", "Marketing Materials"],
+    cta: "Start Designing",
+  },
+];
 
 const services = [
   {
@@ -54,12 +73,15 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="container relative mx-auto text-center max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-medium text-primary mb-5">
+            <Sparkles className="h-3.5 w-3.5" /> All-in-One Tech Solutions
+          </div>
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Our Services</p>
           <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-            End-to-end <span className="text-gradient">cybersecurity services</span>
+            Cybersecurity <span className="text-gradient">+ Digital Solutions</span>
           </h1>
           <p className="mt-6 text-muted-foreground text-lg">
-            Six core capabilities. One trusted partner. Whatever your security challenge — we have the expertise to solve it.
+            Six core security capabilities, plus web development and design — one trusted partner for every layer of your digital business.
           </p>
         </div>
       </section>
