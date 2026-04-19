@@ -25,12 +25,15 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="container relative mx-auto text-center max-w-3xl">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Get in Touch</p>
+          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+            Get in Touch
+          </p>
           <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
             Let's <span className="text-gradient">secure</span> your business
           </h1>
           <p className="mt-6 text-muted-foreground text-lg">
-            Fill the form below or reach us directly. Free 30-min consultation, no obligation.
+            Fill the form below or reach us directly. Free 30-min consultation,
+            no obligation.
           </p>
         </div>
       </section>
@@ -46,8 +49,14 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <a href="tel:+919999999999" className="text-sm text-muted-foreground hover:text-primary transition block">+91 99999 99999</a>
-                  <p className="text-xs text-muted-foreground mt-1">Mon–Sat, 9am–7pm IST</p>
+                  <a
+                    href="tel:+918181924786"
+                    className="text-sm text-muted-foreground hover:text-primary transition block">
+                    +91 8181924786
+                  </a>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Mon–Fri, 9am–7pm IST
+                  </p>
                 </div>
               </div>
 
@@ -57,8 +66,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <a href="mailto:hello@cyberforge.tech" className="text-sm text-muted-foreground hover:text-primary transition block">hello@cyberforge.tech</a>
-                  <a href="mailto:soc@cyberforge.tech" className="text-sm text-muted-foreground hover:text-primary transition block">soc@cyberforge.tech</a>
+                  <a
+                    href="support@tfcyberforgetechnologies.com"
+                    className="text-sm text-muted-foreground hover:text-primary transition block">
+                    support@tfcyberforgetechnologies.com
+                  </a>
                 </div>
               </div>
 
@@ -68,7 +80,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Office</h4>
-                  <p className="text-sm text-muted-foreground">500 Cyber Avenue, Tech Park,<br />Bengaluru 560001, India</p>
+                  <p className="text-sm text-muted-foreground">
+                    500 Cyber Avenue, Tech Park,
+                    <br />
+                    Greater Noida, India
+                  </p>
                 </div>
               </div>
 
@@ -76,14 +92,15 @@ const Contact = () => {
                 href="https://wa.me/919999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card p-6 flex items-center gap-4 hover:border-primary/60 transition"
-              >
+                className="glass-card p-6 flex items-center gap-4 hover:border-primary/60 transition">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/30 grid place-items-center text-primary">
                   <MessageCircle className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="font-semibold">Chat on WhatsApp</h4>
-                  <p className="text-sm text-muted-foreground">Get an instant response</p>
+                  <p className="text-sm text-muted-foreground">
+                    Get an instant response
+                  </p>
                 </div>
               </a>
             </div>
@@ -91,39 +108,80 @@ const Contact = () => {
             {/* Form */}
             <div className="lg:col-span-3">
               <div className="glass-card p-8 md:p-10">
-                <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">Send us a message</h2>
-                <p className="text-sm text-muted-foreground mb-6">We typically respond within a few hours.</p>
+                <h2 className="font-display text-2xl md:text-3xl font-bold mb-2">
+                  Send us a message
+                </h2>
+                <p className="text-sm text-muted-foreground mb-6">
+                  We typically respond within a few hours.
+                </p>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input id="name" name="name" required placeholder="John Doe" />
+                      <Input
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="John Doe"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" name="email" type="email" required placeholder="john@company.com" />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="john@company.com"
+                      />
                     </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="company">Company</Label>
-                      <Input id="company" name="company" placeholder="Acme Inc." />
+                      <Input
+                        id="company"
+                        name="company"
+                        placeholder="Acme Inc."
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="+91 ..." />
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+91 ..."
+                      />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">How can we help? *</Label>
-                    <Textarea id="message" name="message" required rows={5} placeholder="Tell us about your security needs..." />
+                    <Textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder="Tell us about your security needs..."
+                    />
                   </div>
 
-                  <Button type="submit" variant="hero" size="lg" disabled={submitting} className="w-full sm:w-auto">
-                    {submitting ? "Sending..." : <>Send Message <Send className="ml-1" /></>}
+                  <Button
+                    type="submit"
+                    variant="hero"
+                    size="lg"
+                    disabled={submitting}
+                    className="w-full sm:w-auto">
+                    {submitting ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        Send Message <Send className="ml-1" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>

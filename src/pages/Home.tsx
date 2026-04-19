@@ -1,17 +1,63 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Lock, Zap, Eye, Cloud, AlertTriangle, FileCheck, Users, Award, TrendingUp, Activity, Code2, Palette, Sparkles, TestTube2, Bug } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Lock,
+  Zap,
+  Eye,
+  Cloud,
+  AlertTriangle,
+  FileCheck,
+  Users,
+  Award,
+  TrendingUp,
+  Activity,
+  Code2,
+  Palette,
+  Sparkles,
+  TestTube2,
+  Bug,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-cyber.jpg";
 
 const services = [
-  { icon: ShieldCheck, title: "Penetration Testing", desc: "Simulated attacks to expose vulnerabilities before hackers do." },
-  { icon: FileCheck, title: "Security Assessment", desc: "Comprehensive audits across infrastructure, apps and people." },
-  { icon: Lock, title: "GRC Advisory", desc: "Governance, risk and compliance aligned to ISO, SOC 2 and GDPR." },
-  { icon: Eye, title: "Managed Security", desc: "24/7 SOC monitoring, threat hunting and rapid containment." },
-  { icon: AlertTriangle, title: "Incident Response", desc: "Forensics, recovery and post-breach hardening on demand." },
-  { icon: Cloud, title: "Cloud Security", desc: "Hardening AWS, Azure and GCP environments end-to-end." },
-  { icon: Bug, title: "Application Pentesting", desc: "Web, mobile & API testing against OWASP Top 10 and beyond." },
-  { icon: TestTube2, title: "QA & Software Testing", desc: "Manual, automated, performance and security testing in one." },
+  {
+    icon: ShieldCheck,
+    title: "Application Penetration Testing",
+    desc: "Simulated attacks to expose vulnerabilities before hackers do.",
+  },
+  {
+    icon: FileCheck,
+    title: "Network Assessment",
+    desc: "Comprehensive audits across infrastructure, apps and people.",
+  },
+  {
+    icon: Lock,
+    title: "GRC Advisory",
+    desc: "Governance, risk and compliance aligned to ISO, SOC 2 and GDPR.",
+  },
+  {
+    icon: Eye,
+    title: "Managed Security",
+    desc: "24/7 SOC monitoring, threat hunting and rapid containment.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Incident Response",
+    desc: "Forensics, recovery and post-breach hardening on demand.",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Security",
+    desc: "Hardening AWS, Azure and GCP environments end-to-end.",
+  },
+
+  {
+    icon: TestTube2,
+    title: "QA & Software Testing",
+    desc: "Manual, automated, performance and security testing in one.",
+  },
 ];
 
 const stats = [
@@ -22,10 +68,26 @@ const stats = [
 ];
 
 const reasons = [
-  { icon: Award, title: "Certified Experts", desc: "OSCP, CISSP, CEH and CISA-certified specialists on every engagement." },
-  { icon: Zap, title: "Rapid Response", desc: "Average incident triage initiated within 15 minutes of detection." },
-  { icon: ShieldCheck, title: "Proven Methodology", desc: "OWASP, NIST and MITRE ATT&CK frameworks baked into our process." },
-  { icon: Lock, title: "Full Confidentiality", desc: "Strict NDAs, encrypted reporting and secure data handling at every step." },
+  {
+    icon: Award,
+    title: "Certified Experts",
+    desc: "OSCP, CISSP, CEH and CISA-certified specialists on every engagement.",
+  },
+  {
+    icon: Zap,
+    title: "Rapid Response",
+    desc: "Average incident triage initiated within 15 minutes of detection.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Proven Methodology",
+    desc: "OWASP, NIST and MITRE ATT&CK frameworks baked into our process.",
+  },
+  {
+    icon: Lock,
+    title: "Full Confidentiality",
+    desc: "Strict NDAs, encrypted reporting and secure data handling at every step.",
+  },
 ];
 
 const Home = () => {
@@ -47,7 +109,9 @@ const Home = () => {
                 <span className="text-gradient">Modern Businesses</span>
               </h1>
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Cyberforge Technologies delivers enterprise-grade defense plus world-class web development and design — one partner to build, brand and bulletproof your business.
+                Cyberforge Technologies delivers enterprise-grade defense plus
+                world-class web development and design — one partner to build,
+                brand and bulletproof your business.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
@@ -61,10 +125,15 @@ const Home = () => {
               </div>
 
               <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> ISO 27001</span>
-                <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> SOC 2 Type II</span>
-                <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> GDPR Ready</span>
-                <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> CERT-In Empanelled</span>
+                <span className="flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-primary" /> ISO 27001
+                </span>
+                <span className="flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-primary" /> SOC 2 Type II
+                </span>
+                <span className="flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-primary" /> GDPR Ready
+                </span>
               </div>
             </div>
 
@@ -88,9 +157,17 @@ const Home = () => {
       <section className="section-padding">
         <div className="container mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-14">
-            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">What We Offer</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold">Complete <span className="text-gradient">Cyber Defense</span> Stack</h2>
-            <p className="mt-4 text-muted-foreground">From offensive testing to 24/7 monitoring — every layer of your stack, secured.</p>
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              What We Offer
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-bold">
+              Complete <span className="text-gradient">Cyber Defense</span>{" "}
+              Stack
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              From offensive testing to 24/7 monitoring — every layer of your
+              stack, secured.
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,14 +175,19 @@ const Home = () => {
               <div
                 key={s.title}
                 className="glass-card p-6 group animate-fade-up"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
+                style={{ animationDelay: `${i * 80}ms` }}>
                 <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-4 group-hover:shadow-glow-sm transition">
                   <s.icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-display font-semibold text-xl mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                <Link to="/services" className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 group-hover:gap-2 transition-all">
+                <h3 className="font-display font-semibold text-xl mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {s.desc}
+                </p>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 group-hover:gap-2 transition-all">
                   Learn more <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -118,12 +200,16 @@ const Home = () => {
       <section className="section-padding border-t border-primary/10 bg-cyber-surface/30">
         <div className="container mx-auto">
           <div className="max-w-2xl mx-auto text-center mb-14">
-            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Beyond Security</p>
+            <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+              Beyond Security
+            </p>
             <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Digital Solutions <span className="text-gradient">Beyond Security</span>
+              Digital Solutions{" "}
+              <span className="text-gradient">Beyond Security</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We don't just defend your business — we help you build it. Modern websites and brand design, engineered with the same precision.
+              We don't just defend your business — we help you build it. Modern
+              websites and brand design, engineered with the same precision.
             </p>
           </div>
 
@@ -133,36 +219,53 @@ const Home = () => {
                 icon: Code2,
                 title: "Web Development",
                 desc: "Fast, scalable and visually stunning websites — from business sites to custom web apps and e-commerce.",
-                points: ["Business & Portfolio Sites", "E-commerce", "Custom Web Apps", "Landing Pages"],
+                points: [
+                  "Business & Portfolio Sites",
+                  "E-commerce",
+                  "Custom Web Apps",
+                  "Landing Pages",
+                ],
                 cta: "Get Your Website",
               },
               {
                 icon: Palette,
                 title: "Graphic Designing",
                 desc: "Creative, impactful design that elevates your brand — logos, social creatives, UI/UX and full branding kits.",
-                points: ["Logo & Branding", "Social Creatives", "UI/UX Design", "Marketing Materials"],
+                points: [
+                  "Logo & Branding",
+                  "Social Creatives",
+                  "UI/UX Design",
+                  "Marketing Materials",
+                ],
                 cta: "Start Designing",
               },
             ].map((s, i) => (
               <div
                 key={s.title}
                 className="glass-card p-8 group transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-sm animate-fade-up"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
+                style={{ animationDelay: `${i * 100}ms` }}>
                 <div className="h-14 w-14 rounded-2xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-5 shadow-glow-sm group-hover:scale-110 transition-transform">
                   <s.icon className="h-7 w-7" />
                 </div>
-                <h3 className="font-display font-bold text-2xl mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{s.desc}</p>
+                <h3 className="font-display font-bold text-2xl mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  {s.desc}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {s.points.map((p) => (
-                    <span key={p} className="text-xs px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-foreground/80">
+                    <span
+                      key={p}
+                      className="text-xs px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-foreground/80">
                       {p}
                     </span>
                   ))}
                 </div>
                 <Button asChild variant="neon" size="sm">
-                  <Link to="/services">{s.cta} <ArrowRight /></Link>
+                  <Link to="/services">
+                    {s.cta} <ArrowRight />
+                  </Link>
                 </Button>
               </div>
             ))}
@@ -173,15 +276,22 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Why Cyberforge</p>
+              <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
+                Why Cyberforge
+              </p>
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-                Defense built on <span className="text-gradient">expertise & precision</span>
+                Defense built on{" "}
+                <span className="text-gradient">expertise & precision</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                We combine offensive security mindsets with enterprise-grade operations. Every engagement is led by certified specialists, backed by transparent reporting and measurable risk reduction.
+                We combine offensive security mindsets with enterprise-grade
+                operations. Every engagement is led by certified specialists,
+                backed by transparent reporting and measurable risk reduction.
               </p>
               <Button asChild variant="hero" size="lg" className="mt-8">
-                <Link to="/about">About Cyberforge <ArrowRight /></Link>
+                <Link to="/about">
+                  About Cyberforge <ArrowRight />
+                </Link>
               </Button>
             </div>
             <div className="grid sm:grid-cols-2 gap-5">
@@ -189,7 +299,9 @@ const Home = () => {
                 <div key={r.title} className="glass-card p-5">
                   <r.icon className="h-8 w-8 text-primary mb-3" />
                   <h4 className="font-semibold mb-1">{r.title}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{r.desc}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {r.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -204,8 +316,12 @@ const Home = () => {
             {stats.map((s) => (
               <div key={s.label} className="glass-card p-8 text-center">
                 <s.icon className="h-8 w-8 text-primary mx-auto mb-3" />
-                <div className="font-display text-4xl md:text-5xl font-bold text-gradient">{s.value}</div>
-                <div className="text-sm text-muted-foreground mt-2">{s.label}</div>
+                <div className="font-display text-4xl md:text-5xl font-bold text-gradient">
+                  {s.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-2">
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
@@ -219,13 +335,17 @@ const Home = () => {
             <div className="absolute inset-0 bg-gradient-glow opacity-60" />
             <div className="relative">
               <h2 className="font-display text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
-                Ready to make your business <span className="text-gradient">unbreachable?</span>
+                Ready to make your business{" "}
+                <span className="text-gradient">unbreachable?</span>
               </h2>
               <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-                Book a free 30-minute consultation with our security architects. No obligation, just clarity.
+                Book a free 30-minute consultation with our security architects.
+                No obligation, just clarity.
               </p>
               <Button asChild variant="hero" size="lg" className="mt-8">
-                <Link to="/contact">Get Your Free Consultation <ArrowRight /></Link>
+                <Link to="/contact">
+                  Get Your Free Consultation <ArrowRight />
+                </Link>
               </Button>
             </div>
           </div>

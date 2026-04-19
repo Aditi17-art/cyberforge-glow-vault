@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
+import {
+  Shield,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,7 +24,8 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Enterprise cybersecurity solutions engineered to defend modern digital businesses against evolving threats.
+              Enterprise cybersecurity solutions engineered to defend modern
+              digital businesses against evolving threats.
             </p>
             <div className="flex gap-3 mt-5">
               {[Linkedin, Twitter, Github, Facebook].map((Icon, i) => (
@@ -23,8 +33,7 @@ const Footer = () => {
                   key={i}
                   href="#"
                   aria-label="social"
-                  className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition"
-                >
+                  className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition">
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
@@ -32,49 +41,104 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4 text-foreground">Company</h4>
+            <h4 className="font-display font-semibold mb-4 text-foreground">
+              Company
+            </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/about" className="hover:text-primary transition">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition">Services</Link></li>
-              <li><Link to="/industries" className="hover:text-primary transition">Industries</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition">Contact</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-primary transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-primary transition">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/industries"
+                  className="hover:text-primary transition">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-primary transition">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4 text-foreground">Services</h4>
+            <h4 className="font-display font-semibold mb-4 text-foreground">
+              Services
+            </h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/services" className="hover:text-primary transition">Penetration Testing</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition">Managed Security</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition">Incident Response</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition">Cloud Security</Link></li>
+              <li>
+                <Link to="/services" className="hover:text-primary transition">
+                  Application Penetration Testing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-primary transition">
+                  Managed Security
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-primary transition">
+                  Incident Response
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-primary transition">
+                  Cloud Security
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4 text-foreground">Get in Touch</h4>
+            <h4 className="font-display font-semibold mb-4 text-foreground">
+              Get in Touch
+            </h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                <span>500 Cyber Avenue, Tech Park, Bengaluru 560001</span>
+                <span>Greater Noida</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:+919999999999" className="hover:text-primary transition">+91 99999 99999</a>
+                <a
+                  href="tel:+918181924786"
+                  className="hover:text-primary transition">
+                  +91 8181924786
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                <a href="mailto:hello@cyberforge.tech" className="hover:text-primary transition">hello@cyberforge.tech</a>
+                <a
+                  href="mailto:support@tfcyberforgetechnologies.com"
+                  className="hover:text-primary transition">
+                  support@tfcyberforgetechnologies.com
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-primary/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Cyberforge Technologies. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Cyberforge Technologies. All rights
+            reserved.
+          </p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-primary transition">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition">Terms of Service</a>
+            <a href="#" className="hover:text-primary transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-primary transition">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>
