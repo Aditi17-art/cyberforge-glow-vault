@@ -1,8 +1,8 @@
 import { MessageCircle, Phone } from "lucide-react";
 
 const FloatingButtons = () => {
-  const phone = "+91917654130108";
-  const wa = "919999999999";
+  const phone = "+918181924786";
+  const wa = "8181924786";
 
   return (
     <>
