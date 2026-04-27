@@ -14,8 +14,11 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-primary/20 bg-cyber-darker mt-20">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Logo Section */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <Shield className="h-7 w-7 text-primary" />
@@ -27,6 +30,7 @@ const Footer = () => {
               Enterprise cybersecurity solutions engineered to defend modern
               digital businesses against evolving threats.
             </p>
+
             <div className="flex gap-3 mt-5">
               {[Linkedin, Twitter, Github, Facebook].map((Icon, i) => (
                 <a
@@ -40,6 +44,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Company Section */}
           <div>
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Company
@@ -70,6 +75,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Services Section */}
           <div>
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Services
@@ -98,6 +104,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Contact Section */}
           <div>
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Get in Touch
@@ -127,11 +134,13 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bottom Footer */}
         <div className="border-t border-primary/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>
             © {new Date().getFullYear()} Cyberforge Technologies. All rights
             reserved.
           </p>
+
           <div className="flex gap-5">
             <a href="#" className="hover:text-primary transition">
               Privacy Policy
@@ -140,6 +149,12 @@ const Footer = () => {
               Terms of Service
             </a>
           </div>
+        </div>
+
+        {/* Designer Credit */}
+        <div className="border-t border-primary/10 mt-4 pt-4 text-center text-sm text-muted-foreground">
+          Design & Develop by{" "}
+          <span className="text-primary font-semibold">ADITI DHARIWAL</span>
         </div>
       </div>
     </footer>
