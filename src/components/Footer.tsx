@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   Mail,
@@ -8,7 +9,26 @@ import {
   Github,
   Facebook,
 } from "lucide-react";
-import logoAsset from "@/assets/cyberforge-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
+
+const services = [
+  {
+    name: "Application Penetration Testing",
+    id: "penetration-testing",
+  },
+  {
+    name: "Managed Security",
+    id: "managed-security-mssp",
+  },
+  {
+    name: "Incident Response",
+    id: "incident-response",
+  },
+  {
+    name: "Cloud Security",
+    id: "cloud-security",
+  },
+];
 
 const Footer = () => {
   return (
@@ -16,17 +36,18 @@ const Footer = () => {
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Logo Section */}
           <div>
             <Link to="/" className="inline-block mb-4">
               <img
-                src={logoAsset.url}
+                src={logoAsset}
                 alt="Cyberforge Technologies"
                 className="h-12 w-auto"
               />
             </Link>
+
             <p className="text-sm text-muted-foreground leading-relaxed">
               Enterprise cybersecurity solutions engineered to defend modern
               digital businesses against evolving threats.
@@ -38,7 +59,8 @@ const Footer = () => {
                   key={i}
                   href="#"
                   aria-label="social"
-                  className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition">
+                  className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
@@ -50,6 +72,7 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Company
             </h4>
+
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link to="/about" className="hover:text-primary transition">
@@ -62,9 +85,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/industries"
-                  className="hover:text-primary transition">
+                <Link to="/industries" className="hover:text-primary transition">
                   Industries
                 </Link>
               </li>
@@ -81,27 +102,18 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Services
             </h4>
+
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <Link to="/services" className="hover:text-primary transition">
-                  Application Penetration Testing
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-primary transition">
-                  Managed Security
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-primary transition">
-                  Incident Response
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-primary transition">
-                  Cloud Security
-                </Link>
-              </li>
+              {services.map((service) => (
+                <li key={service.id}>
+                  <Link
+                    to={`/services#${service.id}`}
+                    className="hover:text-primary transition"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -110,24 +122,29 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4 text-foreground">
               Get in Touch
             </h4>
+
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                 <span>Greater Noida</span>
               </li>
+
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
                 <a
                   href="tel:+918181924786"
-                  className="hover:text-primary transition">
+                  className="hover:text-primary transition"
+                >
                   +91 8181924786
                 </a>
               </li>
+
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
                 <a
                   href="mailto:support@tfcyberforgetechnologies.com"
-                  className="hover:text-primary transition">
+                  className="hover:text-primary transition"
+                >
                   support@tfcyberforgetechnologies.com
                 </a>
               </li>
@@ -153,17 +170,17 @@ const Footer = () => {
         </div>
 
         {/* Designer Credit */}
-<div className="border-t border-primary/10 mt-4 pt-4 text-center text-sm text-muted-foreground">
-  Design & Develop by{" "}
-  <a
-    href="https://www.linkedin.com/in/aditidhariwal/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-primary font-semibold hover:underline hover:text-primary/80 transition"
-  >
-    ADITI DHARIWAL
-  </a>
-</div>
+        <div className="border-t border-primary/10 mt-4 pt-4 text-center text-sm text-muted-foreground">
+          Design &amp; Develop by{" "}
+          <a
+            href="https://www.linkedin.com/in/aditidhariwal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary font-semibold hover:underline hover:text-primary/80 transition"
+          >
+            ADITI DHARIWAL
+          </a>
+        </div>
       </div>
     </footer>
   );
