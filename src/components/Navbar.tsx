@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, Shield, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logoAsset from "@/assets/cyberforge-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -36,14 +37,12 @@ const Navbar = () => {
       )}
     >
       <nav className="container mx-auto flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Shield className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
-            <div className="absolute inset-0 blur-md bg-primary/40 group-hover:bg-primary/70 transition" />
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight">
-            Cyber<span className="text-gradient">forge</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <img
+            src={logoAsset.url}
+            alt="Cyberforge Technologies"
+            className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-1">

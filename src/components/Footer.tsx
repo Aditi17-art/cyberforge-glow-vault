@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  Shield,
   Mail,
   Phone,
   MapPin,
@@ -9,6 +8,7 @@ import {
   Github,
   Facebook,
 } from "lucide-react";
+import logoAsset from "@/assets/cyberforge-logo.png.asset.json";
 
 const Footer = () => {
   return (
@@ -20,11 +20,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo Section */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <Shield className="h-7 w-7 text-primary" />
-              <span className="font-display font-bold text-lg">
-                Cyber<span className="text-gradient">forge</span>
-              </span>
+            <Link to="/" className="inline-block mb-4">
+              <img
+                src={logoAsset.url}
+                alt="Cyberforge Technologies"
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Enterprise cybersecurity solutions engineered to defend modern
