@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -16,49 +17,63 @@ import {
   Palette,
   Sparkles,
   TestTube2,
-  Bug,
 } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-cyber.jpg";
+
+/* =====================================
+   SERVICES DATA
+===================================== */
 
 const services = [
   {
     icon: ShieldCheck,
     title: "Application Penetration Testing",
     desc: "Simulated attacks to expose vulnerabilities before hackers do.",
+    sectionId: "penetration-testing",
   },
   {
     icon: FileCheck,
     title: "Network Assessment",
     desc: "Comprehensive audits across infrastructure, apps and people.",
+    sectionId: "security-assessment",
   },
   {
     icon: Lock,
     title: "GRC Advisory",
     desc: "Governance, risk and compliance aligned to ISO, SOC 2 and GDPR.",
+    sectionId: "grc-advisory",
   },
   {
     icon: Eye,
     title: "Managed Security",
     desc: "24/7 SOC monitoring, threat hunting and rapid containment.",
+    sectionId: "managed-security-mssp",
   },
   {
     icon: AlertTriangle,
     title: "Incident Response",
     desc: "Forensics, recovery and post-breach hardening on demand.",
+    sectionId: "incident-response",
   },
   {
     icon: Cloud,
     title: "Cloud Security",
     desc: "Hardening AWS, Azure and GCP environments end-to-end.",
+    sectionId: "cloud-security",
   },
-
   {
     icon: TestTube2,
     title: "QA & Software Testing",
     desc: "Manual, automated, performance and security testing in one.",
+    sectionId: "qa-testing",
   },
 ];
+
+/* =====================================
+   STATS DATA
+===================================== */
 
 const stats = [
   { icon: TrendingUp, value: "500+", label: "Projects Delivered" },
@@ -66,6 +81,10 @@ const stats = [
   { icon: ShieldCheck, value: "99.9%", label: "Security Rate" },
   { icon: Activity, value: "24/7", label: "Threat Monitoring" },
 ];
+
+/* =====================================
+   WHY CHOOSE US DATA
+===================================== */
 
 const reasons = [
   {
@@ -90,55 +109,112 @@ const reasons = [
   },
 ];
 
+/* =====================================
+   DIGITAL SOLUTIONS DATA
+===================================== */
+
+const digitalSolutions = [
+  {
+    icon: Code2,
+    title: "Web Development",
+    desc: "Fast, scalable and visually stunning websites — from business sites to custom web apps and e-commerce.",
+    points: [
+      "Business & Portfolio Sites",
+      "E-commerce",
+      "Custom Web Apps",
+      "Landing Pages",
+    ],
+    cta: "Get Your Website",
+    sectionId: "web-development",
+  },
+  {
+    icon: Palette,
+    title: "Graphic Designing",
+    desc: "Creative, impactful design that elevates your brand — logos, social creatives, UI/UX and full branding kits.",
+    points: [
+      "Logo & Branding",
+      "Social Creatives",
+      "UI/UX Design",
+      "Marketing Materials",
+    ],
+    cta: "Start Designing",
+    sectionId: "graphic-designing",
+  },
+];
+
+/* =====================================
+   HOME PAGE
+===================================== */
+
 const Home = () => {
   return (
     <>
-      {/* HERO */}
+      {/* =====================================
+          HERO SECTION
+      ===================================== */}
+
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute inset-0 grid-bg opacity-50" />
+
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-xs font-medium text-primary mb-6">
                 <Sparkles className="h-3.5 w-3.5" />
                 All-in-One Tech Solutions
               </div>
+
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
                 Cybersecurity + Digital Solutions for{" "}
-                <span className="text-gradient">Modern Businesses</span>
+                <span className="text-gradient">
+                  Modern Businesses
+                </span>
               </h1>
+
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
                 Cyberforge Technologies delivers enterprise-grade defense plus
                 world-class web development and design — one partner to build,
                 brand and bulletproof your business.
               </p>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button asChild variant="hero" size="lg">
                   <Link to="/contact">
-                    Get Free Consultation <ArrowRight className="ml-1" />
+                    Get Free Consultation
+                    <ArrowRight className="ml-1" />
                   </Link>
                 </Button>
+
                 <Button asChild variant="neon" size="lg">
-                  <Link to="/services">Explore Services</Link>
+                  <Link to="/services">
+                    Explore Services
+                  </Link>
                 </Button>
               </div>
 
               <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-primary" /> ISO 27001
+                  <ShieldCheck className="h-4 w-4 text-primary" />
+                  ISO 27001
                 </span>
+
                 <span className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-primary" /> SOC 2 Type II
+                  <ShieldCheck className="h-4 w-4 text-primary" />
+                  SOC 2 Type II
                 </span>
+
                 <span className="flex items-center gap-2">
-                  <ShieldCheck className="h-4 w-4 text-primary" /> GDPR Ready
+                  <ShieldCheck className="h-4 w-4 text-primary" />
+                  GDPR Ready
                 </span>
               </div>
             </div>
 
             <div className="relative animate-fade-in">
               <div className="absolute -inset-4 bg-gradient-glow blur-3xl" />
+
               <div className="relative rounded-2xl overflow-hidden neon-border animate-float">
                 <img
                   src={heroImg}
@@ -149,21 +225,31 @@ const Home = () => {
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* SERVICES PREVIEW */}
+      {/* =====================================
+          SERVICES PREVIEW
+      ===================================== */}
+
       <section className="section-padding">
         <div className="container mx-auto">
+
           <div className="max-w-2xl mx-auto text-center mb-14">
             <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               What We Offer
             </p>
+
             <h2 className="font-display text-3xl md:text-5xl font-bold">
-              Complete <span className="text-gradient">Cyber Defense</span>{" "}
+              Complete{" "}
+              <span className="text-gradient">
+                Cyber Defense
+              </span>{" "}
               Stack
             </h2>
+
             <p className="mt-4 text-muted-foreground">
               From offensive testing to 24/7 monitoring — every layer of your
               stack, secured.
@@ -175,38 +261,53 @@ const Home = () => {
               <div
                 key={s.title}
                 className="glass-card p-6 group animate-fade-up"
-                style={{ animationDelay: `${i * 80}ms` }}>
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
                 <div className="h-12 w-12 rounded-xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-4 group-hover:shadow-glow-sm transition">
                   <s.icon className="h-6 w-6" />
                 </div>
+
                 <h3 className="font-display font-semibold text-xl mb-2">
                   {s.title}
                 </h3>
+
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {s.desc}
                 </p>
+
                 <Link
-                  to="/services"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 group-hover:gap-2 transition-all">
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  to={`/services#${s.sectionId}`}
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-4 group-hover:gap-2 transition-all"
+                >
+                  Learn more
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* DIGITAL SOLUTIONS PREVIEW */}
+      {/* =====================================
+          DIGITAL SOLUTIONS PREVIEW
+      ===================================== */}
+
       <section className="section-padding border-t border-primary/10 bg-cyber-surface/30">
         <div className="container mx-auto">
+
           <div className="max-w-2xl mx-auto text-center mb-14">
             <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
               Beyond Security
             </p>
+
             <h2 className="font-display text-3xl md:text-5xl font-bold">
               Digital Solutions{" "}
-              <span className="text-gradient">Beyond Security</span>
+              <span className="text-gradient">
+                Beyond Security
+              </span>
             </h2>
+
             <p className="mt-4 text-muted-foreground">
               We don't just defend your business — we help you build it. Modern
               websites and brand design, engineered with the same precision.
@@ -214,141 +315,164 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: Code2,
-                title: "Web Development",
-                desc: "Fast, scalable and visually stunning websites — from business sites to custom web apps and e-commerce.",
-                points: [
-                  "Business & Portfolio Sites",
-                  "E-commerce",
-                  "Custom Web Apps",
-                  "Landing Pages",
-                ],
-                cta: "Get Your Website",
-              },
-              {
-                icon: Palette,
-                title: "Graphic Designing",
-                desc: "Creative, impactful design that elevates your brand — logos, social creatives, UI/UX and full branding kits.",
-                points: [
-                  "Logo & Branding",
-                  "Social Creatives",
-                  "UI/UX Design",
-                  "Marketing Materials",
-                ],
-                cta: "Start Designing",
-              },
-            ].map((s, i) => (
+            {digitalSolutions.map((s, i) => (
               <div
                 key={s.title}
                 className="glass-card p-8 group transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-sm animate-fade-up"
-                style={{ animationDelay: `${i * 100}ms` }}>
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
                 <div className="h-14 w-14 rounded-2xl bg-primary/10 border border-primary/30 grid place-items-center text-primary mb-5 shadow-glow-sm group-hover:scale-110 transition-transform">
                   <s.icon className="h-7 w-7" />
                 </div>
+
                 <h3 className="font-display font-bold text-2xl mb-2">
                   {s.title}
                 </h3>
+
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   {s.desc}
                 </p>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {s.points.map((p) => (
                     <span
                       key={p}
-                      className="text-xs px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-foreground/80">
+                      className="text-xs px-2.5 py-1 rounded-full border border-primary/20 bg-primary/5 text-foreground/80"
+                    >
                       {p}
                     </span>
                   ))}
                 </div>
+
                 <Button asChild variant="neon" size="sm">
-                  <Link to="/services">
-                    {s.cta} <ArrowRight />
+                  <Link to={`/services#${s.sectionId}`}>
+                    {s.cta}
+                    <ArrowRight />
                   </Link>
                 </Button>
               </div>
             ))}
           </div>
+
         </div>
       </section>
+
+      {/* =====================================
+          WHY CHOOSE CYBERFORGE
+      ===================================== */}
+
       <section className="section-padding bg-cyber-surface/30 border-y border-primary/10">
         <div className="container mx-auto">
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
             <div>
               <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">
                 Why Cyberforge
               </p>
+
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
                 Defense built on{" "}
-                <span className="text-gradient">expertise & precision</span>
+                <span className="text-gradient">
+                  expertise & precision
+                </span>
               </h2>
+
               <p className="text-muted-foreground leading-relaxed">
                 We combine offensive security mindsets with enterprise-grade
                 operations. Every engagement is led by certified specialists,
                 backed by transparent reporting and measurable risk reduction.
               </p>
+
               <Button asChild variant="hero" size="lg" className="mt-8">
                 <Link to="/about">
-                  About Cyberforge <ArrowRight />
+                  About Cyberforge
+                  <ArrowRight />
                 </Link>
               </Button>
             </div>
+
             <div className="grid sm:grid-cols-2 gap-5">
               {reasons.map((r) => (
                 <div key={r.title} className="glass-card p-5">
                   <r.icon className="h-8 w-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-1">{r.title}</h4>
+
+                  <h4 className="font-semibold mb-1">
+                    {r.title}
+                  </h4>
+
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     {r.desc}
                   </p>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* STATS */}
+      {/* =====================================
+          STATS
+      ===================================== */}
+
       <section className="section-padding">
         <div className="container mx-auto">
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((s) => (
-              <div key={s.label} className="glass-card p-8 text-center">
+              <div
+                key={s.label}
+                className="glass-card p-8 text-center"
+              >
                 <s.icon className="h-8 w-8 text-primary mx-auto mb-3" />
+
                 <div className="font-display text-4xl md:text-5xl font-bold text-gradient">
                   {s.value}
                 </div>
+
                 <div className="text-sm text-muted-foreground mt-2">
                   {s.label}
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* CTA */}
+      {/* =====================================
+          FINAL CTA
+      ===================================== */}
+
       <section className="section-padding">
         <div className="container mx-auto">
+
           <div className="relative overflow-hidden rounded-3xl glass-card p-10 md:p-16 text-center">
             <div className="absolute inset-0 bg-gradient-glow opacity-60" />
+
             <div className="relative">
               <h2 className="font-display text-3xl md:text-5xl font-bold max-w-3xl mx-auto">
                 Ready to make your business{" "}
-                <span className="text-gradient">unbreachable?</span>
+                <span className="text-gradient">
+                  unbreachable?
+                </span>
               </h2>
+
               <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
                 Book a free 30-minute consultation with our security architects.
                 No obligation, just clarity.
               </p>
+
               <Button asChild variant="hero" size="lg" className="mt-8">
                 <Link to="/contact">
-                  Get Your Free Consultation <ArrowRight />
+                  Get Your Free Consultation
+                  <ArrowRight />
                 </Link>
               </Button>
             </div>
           </div>
+
         </div>
       </section>
     </>

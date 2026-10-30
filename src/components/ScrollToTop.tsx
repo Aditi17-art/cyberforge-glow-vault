@@ -1,43 +1,62 @@
+
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-/**
- * Root-cause fix for stale scroll positions on navigation:
- * React Router only swaps the rendered route — it never touches the
- * window scroll, so the previous page's offset carries over to the
- * next page and the browser may also restore a saved scroll position
- * (history.scrollRestoration). This component resets the scroll to
- * (0, 0) on every location change and honours #hash targets instead,
- * accounting for the fixed navbar height when scrolling to a section.
- */
-const NAVBAR_OFFSET = 88; // fixed navbar (h-20) + breathing room
+const NAVBAR_OFFSET = 100;
 
 const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
-  // useLayoutEffect: runs before the browser paints the new page, so the
-  // reset to (0, 0) never produces a visible flash of the old scroll offset.
   useLayoutEffect(() => {
-    // Stop the browser from restoring a previous scroll position.
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
+    let cancelled = false;
+    let attempts = 0;
+    let frameId: number;
 
-    if (hash) {
-      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
-      if (target) {
-        const top =
-          target.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET;
-        window.scrollTo({ top: Math.max(top, 0), left: 0, behavior: "smooth" });
+    const scrollToDestination = () => {
+      if (cancelled) return;
+
+      if (!hash) {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "instant",
+        });
         return;
       }
-    }
 
-    // Instant reset — avoids an animated scroll flying past content.
-    // "instant" is required because the global CSS scroll-behavior: smooth
-    // would otherwise turn behavior: "auto" into an animated glide.
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-  }, [pathname, hash]);
+      const id = decodeURIComponent(hash.slice(1));
+      const element = document.getElementById(id);
+
+      if (element) {
+        const top =
+          element.getBoundingClientRect().top +
+          window.scrollY -
+          NAVBAR_OFFSET;
+
+        window.scrollTo({
+          top: Math.max(0, top),
+          behavior: "instant",
+        });
+
+        return;
+      }
+
+      attempts++;
+
+      if (attempts < 120) {
+        frameId = requestAnimationFrame(scrollToDestination);
+      } else {
+        console.warn("Scroll target not found:", id);
+      }
+    };
+
+    frameId = requestAnimationFrame(scrollToDestination);
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(frameId);
+    };
+  }, [pathname, hash, key]);
 
   return null;
 };

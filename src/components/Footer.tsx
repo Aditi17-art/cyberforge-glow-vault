@@ -153,10 +153,17 @@ const Footer = () => {
         </div>
 
         {/* Designer Credit */}
-        <div className="border-t border-primary/10 mt-4 pt-4 text-center text-sm text-muted-foreground">
-          Design & Develop by{" "}
-          <span className="text-primary font-semibold">ADITI DHARIWAL</span>
-        </div>
+<div className="border-t border-primary/10 mt-4 pt-4 text-center text-sm text-muted-foreground">
+  Design & Develop by{" "}
+  <a
+    href="https://www.linkedin.com/in/aditidhariwal/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary font-semibold hover:underline hover:text-primary/80 transition"
+  >
+    ADITI DHARIWAL
+  </a>
+</div>
       </div>
     </footer>
   );
