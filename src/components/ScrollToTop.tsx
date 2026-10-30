@@ -34,7 +34,9 @@ const ScrollToTop = () => {
     }
 
     // Instant reset — avoids an animated scroll flying past content.
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    // "instant" is required because the global CSS scroll-behavior: smooth
+    // would otherwise turn behavior: "auto" into an animated glide.
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
   }, [pathname, hash]);
 
   return null;
