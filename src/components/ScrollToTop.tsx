@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 /**
@@ -15,7 +15,9 @@ const NAVBAR_OFFSET = 88; // fixed navbar (h-20) + breathing room
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
-  useEffect(() => {
+  // useLayoutEffect: runs before the browser paints the new page, so the
+  // reset to (0, 0) never produces a visible flash of the old scroll offset.
+  useLayoutEffect(() => {
     // Stop the browser from restoring a previous scroll position.
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
