@@ -174,7 +174,7 @@ const Home = () => {
               </h1>
 
               <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Cyberforge Technologies delivers enterprise-grade defense plus
+                Cyberforge Technologies delivers Enterprises-grade defense plus
                 world-class web development and design — one partner to build,
                 brand and bulletproof your business.
               </p>
@@ -379,7 +379,7 @@ const Home = () => {
               </h2>
 
               <p className="text-muted-foreground leading-relaxed">
-                We combine offensive security mindsets with enterprise-grade
+                We combine offensive security mindsets with Enterprises-grade
                 operations. Every engagement is led by certified specialists,
                 backed by transparent reporting and measurable risk reduction.
               </p>

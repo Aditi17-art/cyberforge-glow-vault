@@ -55,7 +55,7 @@ const industries = [
   { icon: HeartPulse, name: "Healthcare" },
   { icon: ShoppingBag, name: "E-commerce" },
   { icon: Cpu, name: "SaaS & Tech" },
-  { icon: Building2, name: "Enterprise" },
+  { icon: Building2, name: "Enterprises" },
   { icon: GraduationCap, name: "EdTech" },
 ];
 
@@ -362,10 +362,7 @@ const About = () => {
               </p>
               <div className="mt-6 text-sm">
                 <span className="font-semibold text-foreground">CISO</span>
-                <span className="text-muted-foreground">
-                  {" "}
-                  · Global FinTech Group
-                </span>
+                
               </div>
             </div>
           </div>

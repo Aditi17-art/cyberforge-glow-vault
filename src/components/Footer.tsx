@@ -5,9 +5,6 @@ import {
   Phone,
   MapPin,
   Linkedin,
-  Twitter,
-  Github,
-  Facebook,
 } from "lucide-react";
 import logoAsset from "@/assets/logo.png";
 
@@ -49,22 +46,23 @@ const Footer = () => {
             </Link>
 
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Enterprise cybersecurity solutions engineered to defend modern
+              Enterprises cybersecurity solutions engineered to defend modern
               digital businesses against evolving threats.
             </p>
-
-            <div className="flex gap-3 mt-5">
-              {[Linkedin, Twitter, Github, Facebook].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="social"
-                  className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+<div className="flex gap-3 mt-5">
+  {[Linkedin].map((Icon, i) => (
+    <a
+      key={i}
+      href="https://www.linkedin.com/company/tfcyberforgetechnologies"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn Profile"
+      className="h-9 w-9 grid place-items-center rounded-full border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary hover:shadow-glow-sm transition"
+    >
+      <Icon className="h-4 w-4" />
+    </a>
+  ))}
+</div>
           </div>
 
           {/* Company Section */}
@@ -126,7 +124,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                <span>Greater Noida</span>
+                <span>Noida</span>
               </li>
 
               <li className="flex items-center gap-2">
@@ -155,7 +153,10 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-primary/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} Cyberforge Technologies. All rights
+            © {new Date().getFullYear()} TF
+            Cyberforge
+             Technologies.
+             All rights
             reserved.
           </p>
 

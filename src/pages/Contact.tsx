@@ -81,9 +81,8 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Office</h4>
                   <p className="text-sm text-muted-foreground">
-                    500 Cyber Avenue, Tech Park,
                     <br />
-                    Greater Noida, India
+                   Noida, India
                   </p>
                 </div>
               </div>
@@ -188,18 +187,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="mt-10 glass-card overflow-hidden p-0">
-            <iframe
-              title="Cyberforge office location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124416.6779097396!2d77.49085005!3d12.9542617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
-              width="100%"
-              height="360"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border-0 grayscale-[40%] contrast-110"
-            />
-          </div>
+          
         </div>
       </section>
     </>

@@ -424,7 +424,7 @@ const Services = () => {
             <div className="lg:col-span-8">
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Combine functional, performance and security testing in one
-                engagement. From sprint-aligned manual QA to enterprise
+                engagement. From sprint-aligned manual QA to Enterprises
                 automation frameworks — we make sure every release is fast,
                 stable and secure.
               </p>
